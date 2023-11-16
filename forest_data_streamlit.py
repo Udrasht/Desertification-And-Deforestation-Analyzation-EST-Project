@@ -268,7 +268,7 @@ st.sidebar.write("-----------------------------")
 if st.sidebar.button("Desertification"):
     st.title("Desertification")
     data_selection = ""
-    intr, intr_caus, land_intro,impact = st.tabs(["Introduction", "Causes", "Land Degredation","Impact"])
+    intr, intr_caus, land_intro,impact,rawanda,Cameroon,zimbabwe,Nigeria,Sudan,SouthSudan,ivoryCoast,Sengal,Congo = st.tabs(["Introduction", "Causes", "Land Degredation","Impact","Rwanda","Cameroon","zimbabwe","Nigeria","Sudan","South Sudan","Ivory Coast","Sengal","Congo"])
 
     with intr:
 
@@ -308,24 +308,83 @@ if st.sidebar.button("Desertification"):
         st.subheader("Land Degradation in Africa")
         image_intro3 = Image.open('land2.jpeg')
         st.image(image_intro3, use_column_width=True)
-    with intr_caus:
+    with impact:
         st.subheader("Impact of Desertification")
         st.write("""
-        ## Anthropogenic Causes
-        - Unsustainable agricultural Practices
-        - Deforestation
-        - Overgrazing
-        """)
-        st.write("""
-        ## Natural Causes
-        - Rainfall and Drought
-        - Climate Change
-        - Wind Erosion 
+        ## Impact of Desertification in African Continent:
+        - Loss of livelihood and food security
+        - Reduction of Portable water
+        - Loss of BIodiversity 
+        - Health Issues
+        - Displacement and Migration 
 
         """)
+
+    with rawanda:
+        st.subheader("Graphs for Rawanda")
+        image_raw1 = Image.open('./charts/Rwanda1.png')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(image_raw1, use_column_width=True)
+        image_raw2 = Image.open('./charts/Rwanda2.png')
+        st.image(image_raw2, use_column_width=True)
+    with Cameroon:
+        st.subheader("Graphs for Cameroon")
+        cameroon1 = Image.open('./charts/cameroon1.png')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(cameroon1, use_column_width=True)
+        cameroon2 = Image.open('./charts/cameroon 2.png')
+        st.image(cameroon2, use_column_width=True)
+    with zimbabwe:
+        st.subheader("Graphs for zimbabwe")
+        zimbabwe1 = Image.open('./charts/zimbabwe1.png')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(zimbabwe1, use_column_width=True)
+        zimbabwe2 = Image.open('./charts/zimbabwe2.png')
+        st.image(zimbabwe2, use_column_width=True)
+    with Nigeria:
+        st.subheader("Graphs for Nigeria")
+        Nigeria1 = Image.open('./charts/nigeria 1.png')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(Nigeria1, use_column_width=True)
+        Nigeria2 = Image.open('./charts/nigeria 2.png')
+        st.image(Nigeria2, use_column_width=True)
         # image_intro4 = Image.open('cause_intro1.jpeg')
         # st.image(image_intro4, use_column_width=True)
-       
+    with Sudan:
+        st.subheader("Graphs for Sudan")
+        Sudan1 = Image.open('./charts/sudan 1.png')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(Sudan1, use_column_width=True)
+        Sudan2 = Image.open('./charts/sudan 2.png')
+        st.image(Sudan2, use_column_width=True)
+    with SouthSudan:
+        st.subheader("Graphs for South Sudan")
+        southSudan1 = Image.open('./charts/south Sudan 2.png')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(southSudan1, use_column_width=True)
+        southSudan2 = Image.open('./charts/south sudan 2.png')
+        st.image(southSudan2, use_column_width=True)
+    with ivoryCoast:
+        st.subheader("Graphs for Ivory Coast")
+        IvoryCoas1 = Image.open('./charts/ivory coast 1.png')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(IvoryCoas1, use_column_width=True)
+        IvoryCoas2 = Image.open('./charts/ivory coast 2.png')
+        st.image(IvoryCoas2, use_column_width=True)
+    with Sengal:
+        st.subheader("Graphs for Senegal")
+        Senegal1 = Image.open('./charts/senegal 1.png')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(Senegal1, use_column_width=True)
+        Senegal2 = Image.open('./charts/senegal 2.png')
+        st.image(Senegal2, use_column_width=True)
+    with Congo:
+        st.subheader("Graphs for Congo")
+        Cong1 = Image.open('./charts/congo 1.png')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(Cong1, use_column_width=True)
+        Cong2 = Image.open('./charts/congo 2.png')
+        st.image(Cong2, use_column_width=True)
 
 
 
