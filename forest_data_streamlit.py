@@ -11,6 +11,7 @@ from sklearn.preprocessing import PolynomialFeatures
 # from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
 from PIL import Image
+import seaborn as sns
 from sklearn.metrics import mean_absolute_error
 from PIL import Image
 import os
@@ -170,7 +171,7 @@ if st.sidebar.button("Submit"):
     # Function to update the output when the dropdown values change
         def on_dropdown_change():
             selected_country_df = filter_country(selected_country)
-
+            st.write("Forest Area Prediction using polynomial Regression")
             st.write(f":green[Selected African Country:] {selected_country}")
             st.write(":green[Tested value table:]" )
             
@@ -198,7 +199,7 @@ if st.sidebar.button("Submit"):
             # Create a DataFrame from the combined array
             df = pd.DataFrame(combined_array, columns=['Year', 'Actual Forest Area(km²)', 'Predicted Forest Area(km²'])
             st.write(df)
-            st.write(f"Mean Squared Error: {mse:.2f}")
+            st.write(f"Mean absolut Error: {mse:.2f}")
             st.write(f":green[Selected Test Year:] {selected_test_year}")
             st.write(f":green[Selected Test Temperature(C):] {selected_test_temp}")
             # st.write(f":green[Selected Test Precipitation(mm):] {selected_test_precp}")
@@ -215,12 +216,19 @@ if st.sidebar.button("Submit"):
             st.subheader(f"{selected_country} Data:")
             st.dataframe(selected_country_df[[ 'Year', 'Temperature( C)', 'Precipitation(mm)', 'Forest Area(km²)']].style.highlight_max(axis=0), height=500)
 
-            fig1, ax1 = plt.subplots(figsize=(10, 6))
-            ax1.bar(selected_country_df['Year'], selected_country_df['Forest Area(km²)'], color='lightblue')
+            fig1, ax1 = plt.subplots(figsize=(7, 5))
+            ax1.bar(selected_country_df['Year'], selected_country_df['Forest Area(km²)'], color='orange')
             ax1.set_xlabel('Year')
             ax1.set_ylabel('Forest Area(km²)')
             ax1.set_title(f'Forest Area Over the Years for {selected_country}', fontsize=16)
             st.pyplot(fig1)
+            fig1, ax1 = plt.subplots(figsize=(7, 5))
+
+            # Use Seaborn color palette for more attractive colors
+
+
+
+            
 
             # Create a bar chart for Forest Area Over the Years
             
@@ -233,7 +241,10 @@ if st.sidebar.button("Submit"):
         country_images = read_images_from_country(country_path)
         # print(country_images)
         # Display images for the selected country in combinations of 2 (2 rows x 2 columns)
+        st.write("Visualization of Deforestation Through Clustering")
         st.write(f"**{selected_country_img} Images:**")
+        st.write("Visualization of Deforestation Through Clustering")
+        st.markdown("<p style='color:red'>Red Colour denotes loss of vegetation.</p>", unsafe_allow_html=True)
         names=[]
         if selected_country_img == "Cameroon":
             names=["2005","2010","2015","2022"]
