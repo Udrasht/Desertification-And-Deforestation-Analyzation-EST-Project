@@ -279,7 +279,7 @@ st.sidebar.write("-----------------------------")
 if st.sidebar.button("Desertification"):
     st.title("Desertification")
     data_selection = ""
-    intr, intr_caus, land_intro,impact,rawanda,Cameroon,zimbabwe,Nigeria,Sudan,SouthSudan,ivoryCoast,Sengal,Congo = st.tabs(["Introduction", "Causes", "Land Degredation","Impact","Rwanda","Cameroon","zimbabwe","Nigeria","Sudan","South Sudan","Ivory Coast","Sengal","Congo"])
+    intr, intr_caus, land_intro,impact,comparision,rawanda,Cameroon,zimbabwe,Nigeria,Sudan,SouthSudan,ivoryCoast,Sengal,Congo ,mes = st.tabs(["Introduction", "Causes", "Land Degredation","Impact","comparision","Rwanda","Cameroon","zimbabwe","Nigeria","Sudan","South Sudan","Ivory Coast","Sengal","Congo","Measure"])
 
     with intr:
 
@@ -329,34 +329,56 @@ if st.sidebar.button("Desertification"):
         - Health Issues
         - Displacement and Migration 
 
-        """)
+        ## Case Study of Sahel Region
 
+       - The Sahel region is stretched across Africa from the Atlantic Ocean to the Red Sea.
+       - The combination of climate change, overgrazing, deforestation, and improper agricultural practices has resulted in extensive land degradation and desertification. 
+       - Around 8 months of the  year, the weather over this region is dry and average rainfall of 100-200 mm in north sahel and  500-600 mm in south sahel.
+       - The population growth over the years has caused illegal farming to take place over the last few years and has resulted in major soil erosion and desertification to take place. 
+       - With increase in population of human and livestock, the dependence on forest and grasslands increased in the area resulting in the overexploitation of resources.
+       - It is estimated  that the sahel lost and saharan desert gain increases with the avg rate of 60km2/year.
+
+        """)
+        pip11 = Image.open('./pic43.jpg')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(pip11, use_column_width=True)
+        pip12 = Image.open('./pic42.jpg')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(pip12, use_column_width=True)
+        pip13 = Image.open('./pic41.jpg')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(pip13, use_column_width=True)
+    with comparision:
+        st.subheader("Comparision")
+        Comparision1 = Image.open('./temp_precp_comp.jpeg')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(Comparision1, use_column_width=True)
     with rawanda:
         st.subheader("Graphs for Rawanda")
         image_raw1 = Image.open('./charts/Rwanda1.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
-        st.image(image_raw1, use_column_width=True)
+        # st.image(image_raw1, use_column_width=True)
         image_raw2 = Image.open('./charts/Rwanda2.png')
         st.image(image_raw2, use_column_width=True)
     with Cameroon:
         st.subheader("Graphs for Cameroon")
         cameroon1 = Image.open('./charts/cameroon1.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
-        st.image(cameroon1, use_column_width=True)
+        # st.image(cameroon1, use_column_width=True)
         cameroon2 = Image.open('./charts/cameroon 2.png')
         st.image(cameroon2, use_column_width=True)
     with zimbabwe:
         st.subheader("Graphs for zimbabwe")
         zimbabwe1 = Image.open('./charts/zimbabwe1.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
-        st.image(zimbabwe1, use_column_width=True)
+        # st.image(zimbabwe1, use_column_width=True)
         zimbabwe2 = Image.open('./charts/zimbabwe2.png')
         st.image(zimbabwe2, use_column_width=True)
     with Nigeria:
         st.subheader("Graphs for Nigeria")
         Nigeria1 = Image.open('./charts/nigeria 1.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
-        st.image(Nigeria1, use_column_width=True)
+        # st.image(Nigeria1, use_column_width=True)
         Nigeria2 = Image.open('./charts/nigeria 2.png')
         st.image(Nigeria2, use_column_width=True)
         # image_intro4 = Image.open('cause_intro1.jpeg')
@@ -365,37 +387,70 @@ if st.sidebar.button("Desertification"):
         st.subheader("Graphs for Sudan")
         Sudan1 = Image.open('./charts/sudan 1.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
-        st.image(Sudan1, use_column_width=True)
+        # st.image(Sudan1, use_column_width=True)
         Sudan2 = Image.open('./charts/sudan 2.png')
         st.image(Sudan2, use_column_width=True)
     with SouthSudan:
         st.subheader("Graphs for South Sudan")
         southSudan1 = Image.open('./charts/south Sudan 2.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
-        st.image(southSudan1, use_column_width=True)
+        # st.image(southSudan1, use_column_width=True)
         southSudan2 = Image.open('./charts/south sudan 2.png')
         st.image(southSudan2, use_column_width=True)
     with ivoryCoast:
         st.subheader("Graphs for Ivory Coast")
         IvoryCoas1 = Image.open('./charts/ivory coast 1.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
-        st.image(IvoryCoas1, use_column_width=True)
+        # st.image(IvoryCoas1, use_column_width=True)
         IvoryCoas2 = Image.open('./charts/ivory coast 2.png')
         st.image(IvoryCoas2, use_column_width=True)
     with Sengal:
         st.subheader("Graphs for Senegal")
         Senegal1 = Image.open('./charts/senegal 1.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
-        st.image(Senegal1, use_column_width=True)
+        # st.image(Senegal1, use_column_width=True)
         Senegal2 = Image.open('./charts/senegal 2.png')
         st.image(Senegal2, use_column_width=True)
     with Congo:
         st.subheader("Graphs for Congo")
         Cong1 = Image.open('./charts/congo 1.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
-        st.image(Cong1, use_column_width=True)
+        # st.image(Cong1, use_column_width=True)
         Cong2 = Image.open('./charts/congo 2.png')
         st.image(Cong2, use_column_width=True)
+    with mes:
+        st.subheader("")
+        st.write("""
+        ## Measure for Restricting and Reducing Desertification
+           - Sustainable Land Management
+           - Afforestation and Reforestation
+           - Water Management
+           - Drought-Resistant Crops
+           - Community Engagement
+           - Livestock Management
+           - Government Support
+           - Education and Awareness
+
+            """ )
+        
+        
+        st.write("""
+           ## Green Wall Initiative in Africa:
+            It was launched in 2007 by the African Union, Great Green Wall initiative aims to restore the continent’s degraded landscapes and transform millions of lives in the Sahel. It was implemented  across 22 African countries and would revitalize thousands of communities across the continent.
+            Objective:
+            - Restore 100 million hectares of currently degraded land; sequester 250 million tons of carbon and create 10 million green jobs by 2030
+            - Reforestation and Afforestation
+            - Biodiversity Conservation
+            - Climate Change Mitigation
+            - Economic Development
+            - Community Involvement
+            - Sustainable Land Use
+            """
+                 )
+        s11 = Image.open('./s1.jpg')
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image(s11, use_column_width=True)
+        
 
 
 
