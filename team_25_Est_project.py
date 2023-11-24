@@ -405,13 +405,13 @@ if st.sidebar.button("Desertification"):
        - It is estimated  that the sahel lost and saharan desert gain increases with the avg rate of 60km2/year.
 
         """)
-        pip11 = Image.open('./pic43.jpg')
+        pip11 = Image.open('./pic43.JPG')
         st.markdown("<br><br>", unsafe_allow_html=True)
         st.image(pip11, use_column_width=True)
-        pip12 = Image.open('./pic42.jpg')
+        pip12 = Image.open('./pic42.JPG')
         st.markdown("<br><br>", unsafe_allow_html=True)
         st.image(pip12, use_column_width=True)
-        pip13 = Image.open('./pic41.jpg')
+        pip13 = Image.open('./pic41.JPG')
         st.markdown("<br><br>", unsafe_allow_html=True)
         st.image(pip13, use_column_width=True)
     with comparision:
@@ -458,7 +458,7 @@ if st.sidebar.button("Desertification"):
         st.image(Sudan2, use_column_width=True)
     with SouthSudan:
         st.subheader("Graphs for South Sudan")
-        southSudan1 = Image.open('./charts/south Sudan 2.png')
+        southSudan1 = Image.open('./charts/south sudan 2.png')
         st.markdown("<br><br>", unsafe_allow_html=True)
         # st.image(southSudan1, use_column_width=True)
         southSudan2 = Image.open('./charts/south sudan 2.png')
