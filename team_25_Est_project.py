@@ -8,7 +8,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import PolynomialFeatures
-# from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
 from PIL import Image
 # import seaborn as sns
