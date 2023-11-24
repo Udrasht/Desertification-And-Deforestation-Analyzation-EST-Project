@@ -11,7 +11,7 @@ from sklearn.preprocessing import PolynomialFeatures
 # from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
 from PIL import Image
-import seaborn as sns
+# import seaborn as sns
 from sklearn.metrics import mean_absolute_error
 from PIL import Image
 import os
